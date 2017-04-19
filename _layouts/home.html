@@ -4,22 +4,37 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
+  <div id="main">
+    <div id="header">
+      <div class="logo">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque eget ex commodo congue eget id dolor. Aliquam erat volutpat. Donec egestas arcu nunc. Nullam risus nisl, suscipit non ex vel, scelerisque imperdiet odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut et ex sagittis, blandit mauris eget, imperdiet urna. Quisque auctor lacus non efficitur mollis. Aenean ornare arcu eu lobortis vehicula. Maecenas id nisi ut nunc pellentesque accumsan.
+
+	Nam nec dui sit amet dolor mollis suscipit. Curabitur viverra nisi eget elementum viverra. Nulla nec justo lectus. Nulla facilisi. In a lorem risus. Donec molestie, elit in commodo euismod, orci est faucibus metus, et posuere neque nulla id tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque justo metus, finibus eget varius quis, euismod vel metus. Sed sollicitudin quam vitae nulla auctor commodo. Aenean imperdiet hendrerit lectus, non elementum nulla dapibus ut. Aenean id dapibus felis, sed auctor lorem. Praesent mattis est in ipsum cursus, eget ultrices neque mattis. Aliquam diam velit, sagittis vitae pretium at, facilisis et risus. Cras vitae mollis quam. Ut tincidunt dignissim tortor, vel dictum lorem varius in. Donec egestas enim vitae purus imperdiet rhoncus.
+      </div>
+    </div>
+    <div id="midle" >
+      <div class="features">
+	Lorem
+      </div>
+      <div class="features">
+	Lorem
+      </div>
+      <div class="features">
+	Lorem
+      </div>
+
+    </div>
+    <div id="footer">
+      <div class="info">
+	Lorem
+      </div>
+      <div class="info">
+	Lorem
+      </div>
+
+    </div>
+  <h1>tests</h1>
+
   {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div>
