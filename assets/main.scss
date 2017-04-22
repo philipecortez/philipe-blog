@@ -3,6 +3,30 @@
 ---
 @charset "utf-8";
 
+// roboto font
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+// reset margins and paddings
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+$grape-color: #94618E;
+$eggplant-color: #49274A;
+$sand-color: #F4DECB;
+$shell-color: #F8EEE7;
 // Our variables
 /*$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -36,9 +60,8 @@ $on-laptop:        800px;
 // }
 
 // Import partials from the `minima` theme.
-@import "normalize";
 @import "neat";
-@import "minima";
+@import "normalize";
 
 #main {
   @include grid-container;
@@ -70,3 +93,65 @@ $on-laptop:        800px;
   @include grid-column(6);
   background-color: red;
 }
+
+
+/// header section
+
+.site-header {
+  background-color: $grape-color;
+  padding: 1em;
+  color: $eggplant-color;
+  // nav
+  .menu {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    margin: 1em 0 1em 0;
+    text-align: center;
+    li {
+      margin-right: 2.5em;
+      display: inline-block;
+      a {
+	color: $eggplant-color;
+	position: relative;
+	text-decoration: none;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: #FFF;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover:before {
+	  cursor: pointer;
+	  visibility: visible;
+	  -webkit-transform: scaleX(1);
+	  transform: scaleX(1);
+	}
+	&:hover {
+	  color: #FFF;
+	}
+      }
+    }
+  }
+
+  // title container
+
+  .title-container {
+    text-align: center;
+    margin: 8em 0 8em 0;
+    a {
+      color: $eggplant-color;
+      text-decoration: none;
+    }
+  }
+}
+
+

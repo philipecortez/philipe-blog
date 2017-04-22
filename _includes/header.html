@@ -2,21 +2,26 @@
 
   <div class="wrapper">
 
-    <div class="jumbotron">
-      <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
-    </div>
-    
-
-    
     <nav class="site-nav">
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          {% endif %}
-        {% endfor %}
+      <div class="menu">
+	<ul>
+	  {% for my_page in site.pages %}
+	  {% if my_page.title %}
+	  <li>
+	    <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+	  </li>
+	  {% endif %}
+	  {% endfor %}
+	</ul>
       </div>
     </nav>
+
+    <div class="title-container">
+      <h1>
+	
+      <a class="site-title" href="{{ "/" | relative_url}}"> <em> {{ site.title | escape }} </em> </a>
+      </h1>
+    </div>
 
   </div>
 
