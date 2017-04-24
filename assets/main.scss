@@ -65,35 +65,12 @@ $on-laptop:        800px;
 
 #main {
   @include grid-container;
+  background-color: $sand-color;
 }
 
-#header {
+#main-content {
   @include grid-column(12);
 }
-
-#midle {
-  @include grid-column(12);
-}
-
-#footer {
-  @include grid-column(12);
-}
-
-.logo {
-  @include grid-column(12);
-  background-color: blue;
-}
-
-.features {
-  @include grid-column(4 of 12);
-  background-color: yellow;
-}
-
-.info {
-  @include grid-column(6);
-  background-color: red;
-}
-
 
 /// header section
 
